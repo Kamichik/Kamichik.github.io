@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Progress</h1>
+      <article class="progress">
+        <div id="arc" class="rotating-element"></div>
+        <fieldset class="progress__controls">
+          <p>
+            <label
+              ><input
+                class="progress__input"
+                type="text"
+                maxlength="3"
+                oninput="this.value = Number.isInteger(Number(this.value)) ? Math.min(100, Math.max(0, Number(this.value))) : ''"
+              />Value</label
+            >
+          </p>
+          <p>
+            <label
+              ><input class="progress__animate" type="checkbox" />Animate</label
+            >
+          </p>
+          <p>
+            <label><input class="progress__hide" type="checkbox" />Hide</label>
+          </p>
+        </fieldset>
+      </article>
+    </section>
+    <script src="progress.js"></script>
+  </body>
+</html>
